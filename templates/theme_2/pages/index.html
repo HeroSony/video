@@ -1,0 +1,638 @@
+{% extends "../base.html" %}
+
+{% load humanize %}
+
+{% block content %}
+    
+{% load hitcount_tags %}
+
+    {% comment %} <!-- Hot Videos -->
+    <div class="video-grid-slider mt-4" uk-slider="finite: true">
+
+        <div class="grid-slider-header">
+            <div class="section-header-left">
+                <h3> Hot Videos </h3>
+                <p> Channals You are Fallowing. </p>
+            </div>
+            <div class="section-header-right">
+                <a href="#" class="see-all"> See all</a>
+            </div>
+            <div class="grid-slider-header-link">
+
+                <div class="btn-arrow-slider">
+                    <a href="#" class="btn-arrow-slides" uk-slider-item="previous">
+                        <span class="arrow-left"></span>
+                    </a>
+                    <a href="#" class="btn-arrow-slides" uk-slider-item="next">
+                        <span class="arrow-right"></span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <ul class="uk-slider-items uk-child-width-1-4@m uk-child-width-1-3@s uk-grid">
+
+            <li>
+                <a href="single-video.html" class="video-post">
+                    <!-- Blog Post Thumbnail -->
+                    <div class="video-post-thumbnail">
+                        <span class="video-post-count">1.4M</span>
+                        <span class="video-post-time">23:00</span>
+                        <span class="play-btn-trigger"></span>
+                        <!-- option menu -->
+                        <span class="btn-option">
+                            <i class="icon-feather-more-vertical"></i>
+                        </span>
+                        <div class="dropdown-option-nav"
+                            uk-dropdown="pos: bottom-right ;mode : hover ;animation: uk-animation-slide-bottom-small">
+                            <ul>
+                                <li>
+                                    <span> <i class="uil-history"></i> Watch Later</span>
+                                </li>
+                                <li>
+                                    <span> <i class="uil-bookmark"></i> Add Bookmark</span>
+                                </li>
+                                <li>
+                                    <span> <i class="uil-share-alt"></i> Share Your Friends</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <img src="assets/images/video-thumbal/2.png" alt="">
+
+                    </div>
+
+                    <!-- Blog Post Content -->
+                    <div class="video-post-content">
+                        <h3> How to create a basic Sticky HTML element using CSS </h3>
+                        <img src="assets/images/avatars/avatar-3.jpg" alt="">
+                        <span class="video-post-user">Jonathan Madano</span>
+                        <span class="video-post-views">531k views</span>
+                        <span class="video-post-date"> 2 weeks ago </span>
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="single-video.html" class="video-post">
+                    <!-- Blog Post Thumbnail -->
+                    <div class="video-post-thumbnail">
+                        <span class="video-post-count">2.7k</span>
+                        <span class="video-post-time">40:00</span>
+                        <span class="play-btn-trigger"></span>
+                        <!-- option menu -->
+                        <span class="btn-option">
+                            <i class="icon-feather-more-vertical"></i>
+                        </span>
+                        <div class="dropdown-option-nav"
+                            uk-dropdown="pos: bottom-right ;mode : hover;animation: uk-animation-slide-bottom-small">
+                            <ul>
+                                <li>
+                                    <span> <i class="uil-history"></i> Watch Later</span>
+                                </li>
+                                <li>
+                                    <span> <i class="uil-bookmark"></i> Add Bookmark</span>
+                                </li>
+                                <li>
+                                    <span> <i class="uil-share-alt"></i> Share Your Friends</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <img src="assets/images/video-thumbal/1.png" alt="">
+                    </div>
+                    <!-- Blog Post Content -->
+                    <div class="video-post-content">
+                        <h3> Learn how to create a PHP singleton class </h3>
+                        <img src="assets/images/avatars/avatar-2.jpg" alt="">
+                        <span class="video-post-user">Stella Johnson</span>
+                        <span class="video-post-views">938k views</span>
+                        <span class="video-post-date"> 3 weeks ago </span>
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="single-video.html" class="video-post">
+                    <!-- Blog Post Thumbnail -->
+                    <div class="video-post-thumbnail">
+                        <span class="video-post-count">2.3M</span>
+                        <span class="video-post-time">14:00</span>
+                        <span class="play-btn-trigger"></span>
+                        <!-- option menu -->
+                        <span class="btn-option">
+                            <i class="icon-feather-more-vertical"></i>
+                        </span>
+                        <div class="dropdown-option-nav"
+                            uk-dropdown="pos: bottom-right ;mode : hover;animation: uk-animation-slide-bottom-small">
+                            <ul>
+                                <li>
+                                    <span> <i class="uil-history"></i> Watch Later</span>
+                                </li>
+                                <li>
+                                    <span> <i class="uil-bookmark"></i> Add Bookmark</span>
+                                </li>
+                                <li>
+                                    <span> <i class="uil-share-alt"></i> Share Your Friends</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <img src="assets/images/video-thumbal/3.png" alt="">
+                    </div>
+                    <!-- Blog Post Content -->
+                    <div class="video-post-content">
+                        <h3> Creating a Laravel Package - and Initializing Package Folders </h3>
+                        <img src="assets/images/avatars/avatar-5.jpg" alt="">
+                        <span class="video-post-user">Alex Dolgove</span>
+                        <span class="video-post-views">531k views</span>
+                        <span class="video-post-date"> 2 weeks ago </span>
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="single-video.html" class="video-post">
+                    <!-- Blog Post Thumbnail -->
+                    <div class="video-post-thumbnail">
+                        <span class="video-post-time">23:00</span>
+                        <span class="play-btn-trigger"></span>
+                        <!-- option menu -->
+                        <span class="btn-option">
+                            <i class="icon-feather-more-vertical"></i>
+                        </span>
+                        <div class="dropdown-option-nav"
+                            uk-dropdown="pos: bottom-right ;mode : hover ;animation: uk-animation-slide-bottom-small">
+                            <ul>
+                                <li>
+                                    <span> <i class="uil-history"></i> Watch Later</span>
+                                </li>
+                                <li>
+                                    <span> <i class="uil-bookmark"></i> Add Bookmark</span>
+                                </li>
+                                <li>
+                                    <span> <i class="uil-share-alt"></i> Share Your Friends</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <img src="assets/images/video-thumbal/4.png" alt="">
+                    </div>
+                    <!-- Blog Post Content -->
+                    <div class="video-post-content">
+                        <h3> Learn how to upload files using Laravel and Filepond </h3>
+                        <img src="assets/images/avatars/avatar-4.jpg" alt="">
+                        <span class="video-post-user">Adrian Mohani</span>
+                        <span class="video-post-views">531k views</span>
+                        <span class="video-post-date"> 2 weeks ago </span>
+                    </div>
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- Most View Videos -->
+    <div class="section-header mt-5">
+        <div class="section-header-left">
+            <h3> Most Viewed Videos </h3>
+            <p> Channals You are Subscriped</p>
+        </div>
+        <div class="section-header-right">
+            <a href="#" class="see-all"> See all</a>
+        </div>
+    </div>
+    <!-- Videos sliders 1 -->
+    <div class="section-small pt-0">
+        <div uk-slider="finite: true">
+
+            <ul class="uk-slider-items uk-child-width-1-4@m uk-child-width-1-3@s uk-grid mb-3">
+
+                <li>
+                    <a href="single-video.html" class="video-post">
+                        <!-- Blog Post Thumbnail -->
+                        <div class="video-post-thumbnail">
+                            <span class="video-post-count">2.7k</span>
+                            <span class="video-post-time">40:00</span>
+                            <span class="play-btn-trigger"></span>
+                            <!-- option menu -->
+                            <span class="btn-option">
+                                <i class="icon-feather-more-vertical"></i>
+                            </span>
+                            <div class="dropdown-option-nav"
+                                uk-dropdown="pos: bottom-right ;mode : hover;animation: uk-animation-slide-bottom-small">
+                                <ul>
+                                    <li>
+                                        <span> <i class="uil-history"></i> Watch Later</span>
+                                    </li>
+                                    <li>
+                                        <span> <i class="uil-bookmark"></i> Add Bookmark</span>
+                                    </li>
+                                    <li>
+                                        <span> <i class="uil-share-alt"></i> Share Your Friends</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <img src="assets/images/video-thumbal/img-3.png" alt="">
+                        </div>
+                        <!-- Blog Post Content -->
+                        <div class="video-post-content">
+                            <h3> Learn How to Prototype Faster with Mockplus! in 2020 </h3>
+                            <img src="assets/images/avatars/avatar-2.jpg" alt="">
+                            <span class="video-post-user">Stella Johnson</span>
+                            <span class="video-post-views">938k views</span>
+                            <span class="video-post-date"> 3 weeks ago </span>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="single-video.html" class="video-post">
+                        <!-- Blog Post Thumbnail -->
+                        <div class="video-post-thumbnail">
+                            <span class="video-post-count">2.3M</span>
+                            <span class="video-post-time">14:00</span>
+                            <span class="play-btn-trigger"></span>
+                            <!-- option menu -->
+                            <span class="btn-option">
+                                <i class="icon-feather-more-vertical"></i>
+                            </span>
+                            <div class="dropdown-option-nav"
+                                uk-dropdown="pos: bottom-right ;mode : hover;animation: uk-animation-slide-bottom-small">
+                                <ul>
+                                    <li>
+                                        <span> <i class="uil-history"></i> Watch Later</span>
+                                    </li>
+                                    <li>
+                                        <span> <i class="uil-bookmark"></i> Add Bookmark</span>
+                                    </li>
+                                    <li>
+                                        <span> <i class="uil-share-alt"></i> Share Your Friends</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <img src="assets/images/video-thumbal/img-4.png" alt="">
+                        </div>
+                        <!-- Blog Post Content -->
+                        <div class="video-post-content">
+                            <h3> Adobe XD Design Tutorial Website Landing Page </h3>
+                            <img src="assets/images/avatars/avatar-5.jpg" alt="">
+                            <span class="video-post-user">Alex Dolgove</span>
+                            <span class="video-post-views">531k views</span>
+                            <span class="video-post-date"> 2 weeks ago </span>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="single-video.html" class="video-post">
+                        <!-- Blog Post Thumbnail -->
+                        <div class="video-post-thumbnail">
+                            <span class="video-post-count">1.4M</span>
+                            <span class="video-post-time">23:00</span>
+                            <span class="play-btn-trigger"></span>
+                            <!-- option menu -->
+                            <span class="btn-option">
+                                <i class="icon-feather-more-vertical"></i>
+                            </span>
+                            <div class="dropdown-option-nav"
+                                uk-dropdown="pos: bottom-right ;mode : hover ;animation: uk-animation-slide-bottom-small">
+                                <ul>
+                                    <li>
+                                        <span> <i class="uil-history"></i> Watch Later</span>
+                                    </li>
+                                    <li>
+                                        <span> <i class="uil-bookmark"></i> Add Bookmark</span>
+                                    </li>
+                                    <li>
+                                        <span> <i class="uil-share-alt"></i> Share Your Friends</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <img src="assets/images/video-thumbal/img-5.png" alt="">
+                        </div>
+                        <!-- Blog Post Content -->
+                        <div class="video-post-content">
+                            <h3> Learn UI/UX Designing Latest Website In Adobe XD </h3>
+                            <img src="assets/images/avatars/avatar-4.jpg" alt="">
+                            <span class="video-post-user">Adrian Mohani</span>
+                            <span class="video-post-views">531k views</span>
+                            <span class="video-post-date"> 2 weeks ago </span>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="single-video.html" class="video-post">
+                        <!-- Blog Post Thumbnail -->
+                        <div class="video-post-thumbnail">
+                            <span class="video-post-count">1.4M</span>
+                            <span class="video-post-time">23:00</span>
+                            <span class="play-btn-trigger"></span>
+                            <!-- option menu -->
+                            <span class="btn-option">
+                                <i class="icon-feather-more-vertical"></i>
+                            </span>
+                            <div class="dropdown-option-nav"
+                                uk-dropdown="pos: bottom-right ;mode : hover ;animation: uk-animation-slide-bottom-small">
+                                <ul>
+                                    <li>
+                                        <span> <i class="uil-history"></i> Watch Later</span>
+                                    </li>
+                                    <li>
+                                        <span> <i class="uil-bookmark"></i> Add Bookmark</span>
+                                    </li>
+                                    <li>
+                                        <span> <i class="uil-share-alt"></i> Share Your Friends</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <img src="assets/images/video-thumbal/img-1.png" alt="">
+
+                        </div>
+
+                        <!-- Blog Post Content -->
+                        <div class="video-post-content">
+                            <h3> Learn How-To Design & Prototype in Adobe XD Tutorial </h3>
+                            <img src="assets/images/avatars/avatar-3.jpg" alt="">
+                            <span class="video-post-user">Jonathan Madano</span>
+                            <span class="video-post-views">531k views</span>
+                            <span class="video-post-date"> 2 weeks ago </span>
+                        </div>
+                    </a>
+                </li>
+
+            </ul>
+
+            <a class="uk-position-center-left-out uk-position-small slidenav-prev" href="#"
+                uk-slider-item="previous"></a>
+            <a class="uk-position-center-right-out uk-position-small slidenav-next" href="#"
+                uk-slider-item="next"></a>
+
+        </div>
+
+    </div> {% endcomment %}
+
+    <!-- Recently Featured Videos -->
+    <div uk-grid>
+        <div class="uk-width-expand">
+
+            <div class="section-header mb-lg-5 border-0 uk-flex-middle">
+                <div class="section-header-left">
+                    <h3 class="uk-heading-line text-left"><span> Recently Featured Videos </span></h3>
+                </div>
+            </div>
+
+            <div class="uk-child-width-1-4@m" uk-grid
+                uk-scrollspy="target: > div; cls: uk-animation-slide-bottom-small; delay: 100">
+
+
+
+    {% if videos %}
+        {% for video in videos %}
+
+            <div>
+                <a href="{% url 'video' video.id %}" class="video-post" data-preview="{{ video.preview.url }}">
+                    <!-- Blog Post Thumbnail -->
+                    <div class="video-post-thumbnail">
+                        <span class="video-post-count">{% get_hit_count for video %}</span>
+                        <span class="video-post-time">23:00</span>
+                        {% comment %} <span class="play-btn-trigger"></span> {% endcomment %}
+                        <!-- option menu -->
+                        {% comment %} <span class="btn-option">
+                            <i class="icon-feather-more-vertical"></i>
+                        </span> {% endcomment %}
+                        {% comment %} <div class="dropdown-option-nav"
+                            uk-dropdown="pos: bottom-right ;mode : hover ;animation: uk-animation-slide-bottom-small">
+                            <ul>
+                                <li>
+                                    <span> <i class="uil-history"></i> Watch Later</span>
+                                </li>
+                                <li>
+                                    <span> <i class="uil-bookmark"></i> Add Bookmark</span>
+                                </li>
+                                <li>
+                                    <span> <i class="uil-share-alt"></i> Share Your Friends</span>
+                                </li>
+                            </ul>
+                        </div> {% endcomment %}
+                        
+                        {% if video.thumbnail %}
+                            <img src="{{ video.thumbnail.url }}" alt="{{ video.title }}" />
+                        {% endif %}
+                        
+
+                    </div>
+
+                    
+
+
+                    <!-- Blog Post Content -->
+                    <div class="video-post-content">
+                        <h3> {{ video.title }} </h3>
+                        {% comment %} <img src="assets/images/avatars/avatar-3.jpg" alt="">
+                        <span class="video-post-user">Jonathan Madano</span>
+                        <span class="video-post-views">531k views</span>
+                        <span class="video-post-date"> 2 weeks ago </span> {% endcomment %}
+                    </div>
+                </a>
+            </div>
+
+        {% endfor %}
+
+
+        
+
+    {% else %}
+        <div class="col-md-12">
+            <p>No Videos Available</p>
+        </div>
+    {% endif %}
+
+
+
+
+            </div>
+
+            <ul class="uk-pagination my-5 uk-flex-center" uk-margin>
+                <li class="uk-active"><span>1</span></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li class="uk-disabled"><span>...</span></li>
+                <li><a href="#"><span uk-pagination-next></span></a></li>
+            </ul>
+
+
+
+        </div>
+
+
+    </div>
+
+
+    {% comment %} <hr class="m-0"> {% endcomment %}
+
+    <!-- Top Channels -->
+    {% comment %} <div class="section-small">
+
+        <div uk-slider="finite: true">
+
+            <div class="grid-slider-header">
+                <div>
+                    <h3> Find Channals </h3>
+                </div>
+                <div class="grid-slider-header-link">
+
+                    <a href="browse-channals.html" class="button transparent uk-visible@m"> View all </a>
+                    <a href="#" class="slide-nav-prev" uk-slider-item="previous"></a>
+                    <a href="#" class="slide-nav-next" uk-slider-item="next"></a>
+
+
+                </div>
+            </div>
+
+            <ul class="uk-slider-items uk-child-width-1-4@m uk-child-width-1-2@s uk-grid mb-3">
+
+                <li>
+                    <a href="single-channal.html">
+                        <div class="channal-card animate-this">
+                            <div class="channal-card-thumbnail" data-src="assets/images/channals/img-3.jpg"
+                                uk-img>
+                            </div>
+                            <div class="channal-card-body">
+                                <div class="channal-card-creator">
+                                    <img src="assets/images/avatars/avatar-5.jpg" alt="">
+                                </div>
+                                <h4>Intelligent </h4>
+                                <p> <span>20K Subscribers . 26 Videos 11M views</span> </p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="single-channal.html">
+                        <div class="channal-card animate-this">
+                            <div class="channal-card-thumbnail" data-src="assets/images/channals/img-5.jpg"
+                                uk-img>
+                            </div>
+                            <div class="channal-card-body">
+                                <div class="channal-card-creator">
+                                    <img src="assets/images/avatars/avatar-3.jpg" alt="">
+                                </div>
+                                <h4> Self Development</h4>
+                                <p> <span>55K Subscribers . 16 Videos 6M views</span> </p>
+                            </div>
+
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="single-channal.html">
+                        <div class="channal-card animate-this">
+                            <div class="channal-card-thumbnail" data-src="assets/images/channals/img-2.jpg"
+                                uk-img>
+                            </div>
+                            <div class="channal-card-body">
+                                <div class="channal-card-creator">
+                                    <img src="assets/images/avatars/avatar-2.jpg" alt="">
+                                </div>
+                                <h4>Daily workout </h4>
+                                <p> <span>98K Subscribers . 45 Videos 6M views</span> </p>
+                            </div>
+
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="single-channal.html">
+                        <div class="channal-card animate-this">
+                            <div class="channal-card-thumbnail" data-src="assets/images/channals/img-1.jpg"
+                                uk-img>
+                            </div>
+                            <div class="channal-card-body">
+                                <div class="channal-card-creator">
+                                    <img src="assets/images/avatars/avatar-4.jpg" alt="">
+                                </div>
+                                <h4> Newfox Media </h4>
+                                <p> <span>55K Subscribers . 36 Videos 16M views</span> </p>
+                            </div>
+
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="single-channal.html">
+                        <div class="channal-card animate-this">
+                            <div class="channal-card-thumbnail" data-src="assets/images/channals/img-4.jpg"
+                                uk-img>
+                            </div>
+                            <div class="channal-card-body">
+                                <div class="channal-card-creator">
+                                    <img src="assets/images/avatars/avatar-4.jpg" alt="">
+                                </div>
+                                <h4>Ninja Medai </h4>
+                                <p> <span>55K Subscribers . 36 Videos 16M views</span> </p>
+                            </div>
+
+                        </div>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div> {% endcomment %}
+
+
+
+    
+{% endblock  %}
+
+
+{% block scripts %}
+<script>
+$(document).ready(function () {
+    $('.video-post').on("mouseenter", function () {
+        let post = $(this);
+        if (post.data('preview')) {
+
+            if(post.find('video').length){
+                post.find('img').hide();
+                post.find('video').trigger('play');
+            } else {
+                let video = $('<video />', {
+                    src: post.data('preview'),
+                    autoplay: true,
+                    loop: true,
+                });
+                post.find('img').hide();
+                post.find('.video-post-thumbnail').append(video);
+            }
+        }
+    }).on("mouseleave", function(e){
+        let post = $(this);
+        if(post.find('video').length){
+            post.find('img').show();
+            post.find('video').trigger('pause');
+        }
+    });
+})
+
+</script>
+{% endblock  %}
+
+{% block styles %}
+<style>
+.video-post-thumbnail {
+    overflow: hidden;
+}
+[class~=video-post-thumbnail] video {
+    border-radius: 10px;
+}
+</style>
+{% endblock  %}

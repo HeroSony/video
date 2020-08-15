@@ -1,0 +1,20 @@
+.front .select select {
+  border: none;
+}
+
+.front .select:not(.is-multiple):after {
+  border-color: #232425;
+}
+
+.front .filter ul {
+  border-bottom: none;
+}
+
+.front .filter li.is-active a {
+  border-bottom: none;
+}
+
+.front .active-filter {
+  color: #e92063;
+}
+

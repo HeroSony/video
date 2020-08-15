@@ -1,0 +1,65 @@
+<nav class="navbar front-navbar">
+
+<div class="container">
+  <div class="navbar-brand">
+
+    <div class="navbar-burger burger" @click="burgerMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="navMenubd-example" class="navbar-menu">
+    <div class="navbar-start">
+
+      <a 
+        {% if '/' == request.path %}
+            class="navbar-item nav-active"
+        {% else %}
+            class="navbar-item"
+        {% endif %}
+        
+        href="{% url 'index' %}">
+          Home
+      </a>
+
+      <a 
+        {% if '/flash' in request.path %}
+            class="navbar-item nav-active"
+        {% else %}
+            class="navbar-item"
+        {% endif %}
+        
+        href="{% url 'flash' %}">
+          Flash
+      </a>
+
+    </div>
+
+    
+    <div class="navbar-end">
+      
+      {% if user.is_authenticated %}
+        <a class="navbar-item" href="{% url 'profile' user.id %}">
+          Profile
+        </a>
+        <a class="navbar-item" href="javascript:{document.getElementById('logout').submit()}">
+          Logout
+        </a>
+        <form action="{% url 'logout' %}" method="POST" id="logout">
+          {% csrf_token %}
+        </form>
+      {% else %}
+        <a class="navbar-item" href="{% url 'login' %}">
+          Login
+        </a>
+        
+      {% endif %}
+      
+    </div>
+
+  </div>
+
+  </div>
+</nav>

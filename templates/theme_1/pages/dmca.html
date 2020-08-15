@@ -1,0 +1,31 @@
+{% extends "theme_1/base.html" %}
+
+{% load humanize %}
+
+{% block content %}
+    
+{% with url='camtubex.com' %}
+<article class="message">
+	<div class="message-body">
+		In accordance with the Digital Millennium Copyright Act of 1998 (the text of which may be found on the U.S. Copyright Office website at <a href="https://www.copyright.gov/" target="_blank">https://www.copyright.gov</a>), <b>{{ url }}</b> will respond expeditiously to claims of copyright infringement that are reported to <b>{{ url }}</b>’s designated copyright agent identified below. Please also note that under Section 512(f) any person who knowingly materially misrepresents that material or activity is infringing may be subject to liability. <b>{{ url }}</b> reserves the right at its sole and entire discretion, to remove content and terminate the accounts of <b>{{ url }}</b> users who infringe, or appear to infringe, the intellectual property or other rights of third parties.
+		<br><br>
+		<b>1.</b> A physical or electronic signature of a person authorized to act on behalf of the owner of an exclusive right that is allegedly infringed;
+		<br><br>
+		<b>2.</b> Identification of the copyright work claimed to have been infringed, or, if multiple copyrighted works at a single online site are covered by a single notification, a representative list of such works at the Website;
+		<br><br>
+		<b>3.</b> Identification of the material that is claimed to be infringing or to be the subject of infringing activity and that is to be removed or access to which is to be disabled, and information reasonably sufficient to permit <b>{{ url }}</b> to locate the material;
+		<br><br>
+		<b>4.</b> Information reasonably sufficient to permit <b>{{ url }}</b> to contact the complaining party, including a name, address, telephone number and, if available, an email address at which the complaining party may be contacted;
+		<br><br>
+		<b>5.</b> A statement that the complaining party has a good-faith belief that use of the material in the manner complained of is not authorized by the copyright owner, its agent or the law; and
+		<br><br>
+		<b>6.</b> A statement that the information in the notification is accurate and, under penalty of perjury, that the complaining party is authorized to act on behalf of the owner of an exclusive right that is allegedly infringed.
+		<br><br>
+		All claims of copyright infringement on or regarding this Website should be delivered to <b>{{ url }}</b>’s designated copyright agent at the following address:
+		Use our support form to <a href="{% url 'contact' %}">contact us</a>
+	</div>
+</article>
+
+{% endwith %}
+    
+{% endblock  %}

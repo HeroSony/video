@@ -1,0 +1,10 @@
+{% extends "admin/app_index.html" %}
+
+{% block extrastyle %}
+    {{ block.super }}
+    <style>
+body.change-list .object-tools li {
+    display: inline;
+}
+</style>
+{% endblock extrastyle %}

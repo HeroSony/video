@@ -1,0 +1,30 @@
+
+{% extends '../base.html' %}
+{% load static %}
+
+{% block linkstyles %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{% static 'css/app.css' %}">
+<link rel="stylesheet" href="{% static 'css/theme.css' %}">
+{% endblock  %}
+
+{% block body %}
+
+<div id="app">
+
+    {% include "./partials/_nav.html" %}
+    {% comment %} {% include "theme_1/partials/_header.html" %} {% endcomment %}
+
+    {% include "./partials/_filter.html" %}
+    
+    <div class="container section">
+
+        {% block content %}{% endblock %}
+
+    </div>
+
+    {% include "./partials/_footer.html" %}
+
+</div>
+
+{% endblock  %}

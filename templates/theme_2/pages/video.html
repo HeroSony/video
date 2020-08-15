@@ -1,0 +1,69 @@
+{% extends "theme_1/base.html" %}
+
+{% load humanize %}
+{% load meta %}
+
+{% block meta %}
+{% include "theme_1/meta.html" %}
+
+{% endblock  %}
+
+
+{% block content %}
+	
+	{% comment %} {{ video }} {% endcomment %}
+    <div style="padding: 0 7rem;">
+	<div class="card">
+		
+		<div class="card-content">
+			<h3 class="title is-4" style="color:#ffffff">{{ video.title }}</h3>
+	
+            <div>
+                <iframe src="{{ video.embed}}" 
+                    frameborder=0
+                    width=100%
+                    height=500
+                    scrolling=no
+                    allowfullscreen=allowfullscreen></iframe>
+            </div>
+
+            <div class="columns is-desktop custom-user-profile">
+				<div class="column">
+					<article class="media">
+						<div class="media-content">
+							<div class="content custom-content">
+								<p style="display: inline; float:left; padding-left:10px;">
+									<a href="{% url 'profile' video.user.id %}" target="_blank">{{ video.user.username }}</a><br><small style="color:#999999;">Published on {{ video.created_at | date:"M d, Y" }}</small>
+									<br>
+								</p>
+
+								<p style="display: inline; float:right; padding-right:10px;">
+									{{ hitcount.total_hits }}
+								</p>
+
+							</div>
+						</div>
+
+					</article>
+				</div>
+			</div>
+
+			<div class="columns is-desktop custom-user-profile">
+				<div class="column">
+					{% for tag in video.tags.all %}
+					<a href="{% url 'search' %}?tags={{ tag.slug }}">
+						{% comment %} {{ video.tags.names|join:', ' }} {% endcomment %}
+						{{ tag.name }}
+					</a>
+					{%if not forloop.last%},{%endif%}
+					{% endfor %}
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+</div>
+
+
+{% endblock  %}

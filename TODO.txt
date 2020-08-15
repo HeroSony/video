@@ -1,0 +1,6 @@
+Done -> gfycat API
+Done -> Search Filter Most View
+SEO (https://django-meta.readthedocs.io/en/latest/models.html)
+Related Item
+Adding tag to models
+Apply new Themes

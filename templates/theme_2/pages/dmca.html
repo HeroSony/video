@@ -1,0 +1,42 @@
+{% extends "../base.html" %}
+
+{% load humanize %}
+
+{% block content %}
+
+{% with url='camtubex.com' %}
+
+<h1> DMCA </h1>
+
+<div uk-grid>
+
+	<div class="uk-width-expand@m mt-0">
+		<article class="uk-article" id="link-1">
+			<p>In accordance with the Digital Millennium Copyright Act of 1998 (the text of which may be found on the U.S. Copyright Office website at <a href="https://www.copyright.gov/" target="_blank">https://www.copyright.gov</a>), <b>{{ url }}</b> will respond expeditiously to claims of copyright infringement that are reported to <b>{{ url }}</b>’s designated copyright agent identified below. Please also note that under Section 512(f) any person who knowingly materially misrepresents that material or activity is infringing may be subject to liability. <b>{{ url }}</b> reserves the right at its sole and entire discretion, to remove content and terminate the accounts of <b>{{ url }}</b> users who infringe, or appear to infringe, the intellectual property or other rights of third parties.
+			</p>
+
+			<p>
+				<ol>
+					<li>A physical or electronic signature of a person authorized to act on behalf of the owner of an exclusive right that is allegedly infringed;</li>
+
+					<li>Identification of the copyright work claimed to have been infringed, or, if multiple copyrighted works at a single online site are covered by a single notification, a representative list of such works at the Website;</li>
+					
+					<li>Identification of the material that is claimed to be infringing or to be the subject of infringing activity and that is to be removed or access to which is to be disabled, and information reasonably sufficient to permit <b>{{ url }}</b> to locate the material;</li>
+					
+					<li>Information reasonably sufficient to permit <b>{{ url }}</b> to contact the complaining party, including a name, address, telephone number and, if available, an email address at which the complaining party may be contacted;</li>
+					
+					<li>A statement that the information in the notification is accurate and, under penalty of perjury, that the complaining party is authorized to act on behalf of the owner of an exclusive right that is allegedly infringed.</li>
+
+				</ol>
+			</p>
+
+			<p>All claims of copyright infringement on or regarding this Website should be delivered to <b>{{ url }}</b>’s designated copyright agent at the following address:
+		Use our support form to <a href="{% url 'contact' %}">contact us.</a></p>
+			
+		</article>
+
+	</div>
+</div>
+{% endwith %}
+    
+{% endblock  %}

@@ -1,0 +1,41 @@
+<div class="container filter"  style="margin-top: 50px;">
+
+<form action="{% url 'search' %}">
+    <div class="field is-grouped">
+        <p class="control is-expanded">
+            <input class="input" type="text" name="keywords" value="{{ keywords }}" placeholder="Find an item...">
+        </p>
+
+
+        <p class="control">
+            <span class="select">
+                <select name="mostview">
+                <option selected value="">Most View</option>
+                <option 
+                {% if 'w' == mostview %}
+                    selected
+                {% endif %}
+                value="w"
+                >Week</option>
+                <option 
+                {% if 'm' == mostview %}
+                    selected
+                {% endif %}
+                value="m">Month</option>
+                <option
+                {% if 'a' == mostview %}
+                    selected
+                {% endif %}
+                value="a">All Time</option>
+                </select>
+            </span>
+        </p>
+
+        <p class="control">
+            <input type="submit" class="button is-info" value="Search" />
+                
+        </p>
+    </div>
+</form>
+
+</div>

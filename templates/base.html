@@ -1,0 +1,42 @@
+{% load static %}
+{% load meta %}
+
+<html lang="en">
+<head>
+
+    <title>Camtubex - Free porn</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="porn, sex, porno, free porn, porn tube, porn videos, stream porn, free streaming porn, full sex videos, sex videos, sex tube, amataur sex movies, free porn videos" />
+    <meta name="description" content="Free Porn Videos" />
+    {% block meta %}{% endblock  %}
+
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}" />
+    <link rel="apple-touch-icon" href="{% static 'img/favicon.ico' %}">
+
+    {% block linkstyles %}{% endblock  %}
+
+    {% block styles %}{% endblock  %}
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-27820263-10"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-27820263-10');
+    </script>
+</head>
+<body>
+
+    {% block body %}{% endblock  %}
+    
+    {% comment %} <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> {% endcomment %}
+    {% block linkscripts %}{% endblock  %}
+    
+    {% block scripts %}{% endblock  %}
+</body>
+</html>
